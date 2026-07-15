@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header id="header">
+        <div class="navbar">
+            <div class="logo">
+                <!-- Netflix Logo SVG -->
+                <svg viewBox="0 0 111 30" class="svg-icon svg-icon-netflix-logo" focusable="false">
+                    <path d="M105.062 14.28L111 30c-1.75-.25-3.499-.563-5.28-.845l-3.345-8.686-3.437 7.969c-1.687-.282-3.344-.376-5.031-.595l6.031-13.75L94.468 0h5.063l3.062 7.874L105.875 0h5.124l-5.937 14.28zM90.47 0h-4.594v27.25c1.5.094 3.062.156 4.594.343V0zm-8.563 26.937c-4.187-.281-8.375-.53-12.656-.625V0h4.687v21.875c2.688.062 5.375.28 7.969.405v4.657zM64.25 10.657v4.687h-6.406V26H53.22V0h13.125v4.687h-8.5v5.97h6.406zm-18.75-5.97V26.25c-1.563 0-3.156 0-4.688.062V4.687h-4.844V0h14.406v4.687h-4.874zM30.75 15.593c-2.062 0-4.5 0-6.25.095v6.968c2.75-.188 5.5-.406 8.281-.5v4.5l-12.968 1.032V0H32.78v4.687H24.5v5.967c2.281 0 4.562-.094 6.25-.094v4.844zM4.78 0v27.25c-1.5.094-3 .156-4.5.25V0h4.5z" fill="#e50914"></path>
+                </svg>
+            </div>
+            <button id="text"> Name </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tvshows">TV Shows</a></li>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#new">New & Popular</a></li>
+                <li><a href="#mylist">My List</a></li>
+            </ul>
+            
+            <div class="nav-right">
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="profile">
+                    <img src="img/John.avif" alt="Profile">
+                    <span class="profile-name">John</span>
+                    <i class="fas fa-caret-down dropdown-icon"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Banner -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="hero-title">Stranger Things</h1>
+                <p class="hero-description">When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-play">
+                        <i class="fas fa-play"></i> Play
+                    </button>
+                    <button class="btn btn-info">
+                        <i class="fas fa-info-circle"></i> More Info
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Movie Rows -->
+        <!-- Trending Now -->
+        <section class="movie-section">
+            <h2 class="section-title">Trending Now</h2>
+            <div class="movie-row-container">
+                <div class="movie-row" id="trending">
+                    <!-- Movie Cards -->
+                    <div class="movie-card">
+                        <img src="img/banner.webp" alt="Movie" class="movie-card-img">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">The Queen's Gambit</h3>
+                            <div class="movie-card-meta">
+                                <span class="match">98% Match</span>
+                                <span>2020</span>
+                                <span>1 Season</span>
+                            </div>
+                            <div class="movie-card-actions">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="movie-card-expanded">
+                            <h3 class="expanded-title">The Queen's Gambit</h3>
+                            <div class="expanded-actions">
+                                <div class="expanded-play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="expanded-action-btn">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="expanded-action-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                            <div class="expanded-meta">
+                                <span class="expanded-match">98% Match</span>
+                                <span class="expanded-rating">18+</span>
+                                <span class="expanded-duration">1 Season</span>
+                            </div>
+                            <p class="expanded-description">In a 1950s orphanage, a young girl reveals an astonishing talent for chess and begins an unlikely journey to stardom while grappling with addiction.</p>
+                            <div class="expanded-genres">
+                                <span class="genre">Dramas</span>
+                                <span class="genre">TV Thrillers</span>
+                                <span class="genre">TV Shows</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Repeat movie cards for the row -->
+                    <!-- Movie 2 -->
+                    <div class="movie-card">
+                        <img src="img/Crown.avif" alt="Movie" class="movie-card-img">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">The Crown</h3>
+                            <div class="movie-card-meta">
+                                <span class="match">89% Match</span>
+                                <span>2016</span>
+                                <span>5 Seasons</span>
+                            </div>
+                            <div class="movie-card-actions">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Movie 3 -->
+                    <div class="movie-card">
+                        <img src="img/Blinders.avif" alt="Movie" class="movie-card-img">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">Peaky Blinders</h3>
+                            <div class="movie-card-meta">
+                                <span class="match">93% Match</span>
+                                <span>2013</span>
+                                <span>6 Seasons</span>
+                            </div>
+                            <div class="movie-card-actions">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Movie 4 -->
+                    <div class="movie-card">
+                        <img src="img/Ozark.jpg" alt="Movie" class="movie-card-img">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">Ozark</h3>
+                            <div class="movie-card-meta">
+                                <span class="match">91% Match</span>
+                                <span>2017</span>
+                                <span>4 Seasons</span>
+                            </div>
+                            <div class="movie-card-actions">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Movie 5 -->
+                    <div class="movie-card">
+                        <img src="img/Heist.avif" alt="Movie" class="movie-card-img">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">Money Heist</h3>
+                            <div class="movie-card-meta">
+                                <span class="match">95% Match</span>
+                                <span>2017</span>
+                                <span>5 Seasons</span>
+                            </div>
+                            <div class="movie-card-actions">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Movie 6 -->
+                    <div class="movie-card">
+                        <img src="img/Wars.jpg" alt="Movie" class="movie-card-img">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">Star Wars</h3>
+                            <div class="movie-card-meta">
+                                <span class="match">88% Match</span>
+                                <span>1977</span>
+                                <span>2h 1m</span>
+                            </div>
+                            <div class="movie-card-actions">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Movie 7 -->
+                    <div class="movie-card">
+                        <img src="img/Impossible.avif" alt="Movie" class="movie-card-img">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">Mission: Impossible</h3>
+                            <div class="movie-card-meta">
+                                <span class="match">86% Match</span>
+                                <span>1996</span>
+                                <span>1h 50m</span>
+                            </div>
+                            <div class="movie-card-actions">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Picks -->
+        <section class="movie-section">
+            <h2 class="section-title">Top Picks for John</h2>
+            <div class="movie-row-container">
+                <div class="movie-row" id="topPicks">
+                    <!-- Reusing the same movie cards for demonstration -->
+                    <!-- Movie cards would be repeated here similar to above -->
+                    <!-- For brevity, using same structure but with different images -->
+                    <div class="movie-card">
+                        <img src="img/Breaking.avif" alt="Movie" class="movie-card-img">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">Breaking Bad</h3>
+                            <div class="movie-card-meta">
+                                <span class="match">99% Match</span>
+                                <span>2008</span>
+                                <span>5 Seasons</span>
+                            </div>
+                            <div class="movie-card-actions">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="movie-card">
+                        <img src="img/Narcos.avif" alt="Movie" class="movie-card-img">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">Narcos</h3>
+                            <div class="movie-card-meta">
+                                <span class="match">90% Match</span>
+                                <span>2015</span>
+                                <span>3 Seasons</span>
+                            </div>
+                            <div class="movie-card-actions">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="movie-card">
+                        <img src="img/Witcher.avif" alt="Movie" class="movie-card-img">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">The Witcher</h3>
+                            <div class="movie-card-meta">
+                                <span class="match">87% Match</span>
+                                <span>2019</span>
+                                <span>3 Seasons</span>
+                            </div>
+                            <div class="movie-card-actions">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="movie-card">
+                        <img src="img/Cards.avif" alt="Movie" class="movie-card-img">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">House of Cards</h3>
+                            <div class="movie-card-meta">
+                                <span class="match">85% Match</span>
+                                <span>2013</span>
+                                <span>6 Seasons</span>
+                            </div>
+                            <div class="movie-card-actions">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="movie-card">
+                        <img src="img/Irishman.avif" alt="Movie" class="movie-card-img">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">The Irishman</h3>
+                            <div class="movie-card-meta">
+                                <span class="match">92% Match</span>
+                                <span>2019</span>
+                                <span>3h 29m</span>
+                            </div>
+                            <div class="movie-card-actions">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Continue Watching -->
+        <section class="movie-section">
+            <h2 class="section-title">Continue Watching for John</h2>
+            <div class="movie-row-container">
+                <div class="movie-row" id="continueWatching">
+                    <!-- Continue watching cards with progress bars -->
+                    <div class="movie-card">
+                        <img src="img/Movie.webp" alt="Movie" class="movie-card-img">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">The Last of Us</h3>
+                            <div class="movie-card-meta">
+                                <span class="match">97% Match</span>
+                                <span>2023</span>
+                                <span>1 Season</span>
+                            </div>
+                            <div class="movie-card-actions">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Progress bar for continue watching -->
+                        <div class="progress-bar" style="position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background-color: #e50914; width: 65%;"></div>
+                    </div>
+                    
+                    <div class="movie-card">
+                        <img src="img/images.jpeg" alt="Movie" class="movie-card-img">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">Daredevil</h3>
+                            <div class="movie-card-meta">
+                                <span class="match">92% Match</span>
+                                <span>2015</span>
+                                <span>3 Seasons</span>
+                            </div>
+                            <div class="movie-card-actions">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar" style="position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background-color: #e50914; width: 40%;"></div>
+                    </div>
+                    
+                    <div class="movie-card">
+                        <img src="img/movie9.jpeg" alt="Movie" class="movie-card-img">
+                        <div class="movie-card-info">
+                            <h3 class="movie-card-title">You</h3>
+                            <div class="movie-card-meta">
+                                <span class="match">89% Match</span>
+                                <span>2018</span>
+                                <span>4 Seasons</span>
+                            </div>
+                            <div class="movie-card-actions">
+                                <div class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="action-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-bar" style="position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background-color: #e50914; width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Audio Description</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Legal Notices</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Cookie Preferences</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Corporate Information</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Media Center</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <button class="footer-button">
+                Service Code
+            </button>
+            
+            <div class="footer-copyright">
+                &copy; 1997-2024 Netflix, Inc.
+            </div>
+        </div>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
